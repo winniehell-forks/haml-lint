@@ -2,6 +2,8 @@
 
 ## master (unreleased)
 
+* Add `InlineScripts` linter to check for use of `script` tags
+
 ## 0.26.0
 
 * Add support for RuboCop 0.49.0+

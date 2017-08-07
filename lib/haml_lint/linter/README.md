@@ -15,6 +15,7 @@ Below is a list of linters supported by `haml-lint`, ordered alphabetically.
 * [IdNames](#idnames)
 * [ImplicitDiv](#implicitdiv)
 * [Indentation](#indentation)
+* [InlineScripts](#inlinescripts)
 * [InlineStyles](#inlinestyles)
 * [InstanceVariables](#instancevariables)
 * [LeadingCommentSpace](#leadingcommentspace)
@@ -335,6 +336,27 @@ Option          | Description
 ```
 
 **Note:** `width` is ignored when `character` is set to `tab`.
+
+## InlineStyles
+
+Tags should not contain inline style attributes.
+
+**Bad**
+```haml
+%script
+  alert('Hello!');
+```
+
+**Bad**
+```haml
+:javascript
+  alert('Another one!');
+```
+
+**Good**
+```haml
+%script{src: 'external-file.js'}
+```
 
 ## InlineStyles
 
